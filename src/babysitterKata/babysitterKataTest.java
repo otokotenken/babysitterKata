@@ -24,4 +24,14 @@ class babysitterKataTest {
 		assertEquals(1, testObject.calculatePay());
 	}
 
+	@Test
+	public void shouldConvertTimeToAPostiveRangeShouldReturnZeroIfInputFive() {
+		assertEquals(0, testObject.convertTimeToAPostiveRange(5));
+	}
+
+	@Test
+	public void shouldConvertTimeToAPositiveRangeShouldReturnElevenIfInputFour() {
+		assertEquals(11, testObject.convertTimeToAPostiveRange(4));
+	}
+	
 }
