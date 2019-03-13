@@ -23,5 +23,12 @@ public class babysitterKata {
 		} else
 			return workingTime + 7;
 	}
+	
+	public boolean validateStartTimeWithInRange(int startTime) {
+		if (convertTimeToAPostiveRange(startTime) < 11) {
+			return true;
+		} else
+			return false;
+	}
 
 }
