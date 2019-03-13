@@ -13,10 +13,6 @@ public class babysitterKata {
 		return 1;
 	}
 	
-	public Boolean determineIfWIthinWorkingHours() {
-		return true;
-	}
-	
 	public int convertTimeToAPostiveRange(int workingTime) {
 		if (workingTime <= 12 && workingTime >= 5) {
 			return workingTime - 5;
