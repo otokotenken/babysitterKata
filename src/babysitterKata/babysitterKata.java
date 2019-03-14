@@ -10,21 +10,11 @@ public class babysitterKata {
 	
 	public int calculatePay(Family[] family) {
 		int paymentTotal = 0;
-		int index = 0;
 		int previousTime =0;
 		for (Family session : family) {
 			int convertedTIme = convertTimeToAPostiveRange(session.payShiftEndTime) - previousTime;
-
-			if(index != 0) {
-				int shiftTotal = session.payRate * convertedTIme;
-				paymentTotal += shiftTotal;
+				paymentTotal += session.payRate * convertedTIme;
 				previousTime += convertedTIme;
-				} else {
-					int shiftTotal = session.payRate * (convertedTIme);
-					paymentTotal += shiftTotal;
-					previousTime = convertedTIme;
-				}
-			index++;
 			
 		}
 		return paymentTotal;
