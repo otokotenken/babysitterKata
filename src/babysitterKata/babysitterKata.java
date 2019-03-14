@@ -2,15 +2,32 @@ package babysitterKata;
 
 public class babysitterKata {
 	
-//	WORKING_START_TIME = 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Calculate total pay, based on babysitter start and end time, and a family.
 		}
 	
-	public int calculatePay() {
-		return 1;
+	public int calculatePay(Family[] family) {
+		int paymentTotal = 0;
+		int index = 0;
+		int previousTime =0;
+		for (Family session : family) {
+			int convertedTIme = convertTimeToAPostiveRange(session.payShiftEndTime) - previousTime;
+
+			if(index != 0) {
+				int shiftTotal = session.payRate * convertedTIme;
+				paymentTotal += shiftTotal;
+				previousTime += convertedTIme;
+				} else {
+					int shiftTotal = session.payRate * (convertedTIme);
+					paymentTotal += shiftTotal;
+					previousTime = convertedTIme;
+				}
+			index++;
+			
+		}
+		return paymentTotal;
 	}
 	
 	public int convertTimeToAPostiveRange(int workingTime) {
