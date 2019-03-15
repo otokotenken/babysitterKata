@@ -35,6 +35,11 @@ class babysitterKataTest {
 		assertEquals(11, testObject.convertTimeToAPostiveRange(END_TIME));
 	}
 	
+	@Test 
+	public void shouldConvertTImeToAPositiveRangeShouldReturnIfInput52() {
+		assertEquals(52, testObject.convertTimeToAPostiveRange(45));
+	}
+	
 	@Test
 	public void shouldReturnTrueStartTimeFivePmIsLessThanEleven() {
 		assertTrue(testObject.validateStartTimeWithInRange(START_TIME));

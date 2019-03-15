@@ -23,8 +23,9 @@ public class babysitterKata {
 	public int convertTimeToAPostiveRange(int workingTime) {
 		if (workingTime <= 12 && workingTime >= 5) {
 			return workingTime - 5;
-		} else
+		} else {
 			return workingTime + 7;
+		}
 	}
 	
 	public boolean validateStartTimeWithInRange(int startTime) {
