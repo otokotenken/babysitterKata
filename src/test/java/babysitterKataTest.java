@@ -8,12 +8,11 @@ import org.junit.jupiter.api.Test;
 class babysitterKataTest {
 	
 	private babysitterKata testObject;
-	static final int START_TIME = 5;
-	static final int END_TIME = 4;
+	private static final int START_TIME = 5;
+	private static final int END_TIME = 4;
 	Family[] familyA;
 	Family[] familyB;
 	Family[] familyC;
-	Family[] familyX;
 
 	@BeforeEach
 	public void setUp() {
@@ -21,7 +20,6 @@ class babysitterKataTest {
 		familyA = new Family[]{new Family(11, 15), new Family(4, 20)};
 		familyB = new Family[] {new Family(10, 12), new Family(12, 8), new Family(4, 16)};
 		familyC = new Family[] {new Family(9, 21), new Family(4, 15)};
-		familyX = new Family[]{new Family(100, 95), new Family(23, 20)};
 	}
 
 	@Test
@@ -34,18 +32,13 @@ class babysitterKataTest {
 		assertEquals(11, testObject.convertTimeToAPostiveRange(END_TIME));
 	}
 	
-	@Test 
-	public void shouldConvertTImeToAPositiveRangeShouldReturnFiftyTwoIfInputFortyFive() {
-		assertEquals(52, testObject.convertTimeToAPostiveRange(45));
-	}
-	
 	@Test
-	public void shouldReturnTrueStartTimeFivePmIsLessThanEleven() {
+	public void shouldReturnTrueStartTimeFivePmIsWithInAvailabilityRAngeOfShiftStarting() {
 		assertTrue(testObject.validateStartTimeWithInRange(START_TIME));
 	}
 
 	@Test
-	public void shouldReturnFalseStartTimeFourAmIsLessThanEleven() {
+	public void shouldReturnFalseStartTimeFourAmIsAfterAvailabilityRangeOfShiftStarting() {
 		assertFalse(testObject.validateStartTimeWithInRange(END_TIME));
 	}
 	
@@ -73,6 +66,5 @@ class babysitterKataTest {
 	public void shouldReturnOneHundredAndEightyNineWhenGivenFamilyCInput() {
 		assertEquals(189, testObject.calculatePay(familyC));
 	}
-	
 	
 }
