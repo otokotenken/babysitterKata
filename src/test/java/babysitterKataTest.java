@@ -1,4 +1,3 @@
-package babysitterKata;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,7 +35,7 @@ class babysitterKataTest {
 	}
 	
 	@Test 
-	public void shouldConvertTImeToAPositiveRangeShouldReturnIfInput52() {
+	public void shouldConvertTImeToAPositiveRangeShouldReturnFiftyTwoIfInputFortyFive() {
 		assertEquals(52, testObject.convertTimeToAPostiveRange(45));
 	}
 	

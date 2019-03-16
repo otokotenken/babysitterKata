@@ -1,4 +1,3 @@
-package babysitterKata;
 
 public class babysitterKata {
 	
