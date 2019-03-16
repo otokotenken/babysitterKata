@@ -20,7 +20,7 @@ class babysitterKataTest {
 		testObject = new babysitterKata();
 		familyA = new Family[]{new Family(11, 15), new Family(4, 20)};
 		familyB = new Family[] {new Family(10, 12), new Family(12, 8), new Family(4, 16)};
-		familyC = new Family [] {new Family(9, 21), new Family(4, 15)};
+		familyC = new Family[] {new Family(9, 21), new Family(4, 15)};
 		familyX = new Family[]{new Family(100, 95), new Family(23, 20)};
 	}
 
@@ -43,7 +43,6 @@ class babysitterKataTest {
 	public void shouldReturnTrueStartTimeFivePmIsLessThanEleven() {
 		assertTrue(testObject.validateStartTimeWithInRange(START_TIME));
 	}
-	
 
 	@Test
 	public void shouldReturnFalseStartTimeFourAmIsLessThanEleven() {
