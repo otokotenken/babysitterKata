@@ -1,4 +1,8 @@
-class babysitterKata {
+package com.example.babysitterKata;
+
+import com.example.babysitterKata.Family;
+
+public class babysitterKata {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

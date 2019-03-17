@@ -1,5 +1,6 @@
+package com.example.babysitterKata;
 
-class Family {
+public class Family {
 	final int payShiftEndTime;
 	final int payRate;
 	

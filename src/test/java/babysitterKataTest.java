@@ -1,6 +1,8 @@
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.example.babysitterKata.Family;
+import com.example.babysitterKata.babysitterKata;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
