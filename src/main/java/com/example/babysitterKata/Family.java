@@ -1,13 +1,26 @@
 package com.example.babysitterKata;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Family {
-	final int payShiftEndTime;
-	final int payRate;
-	
-	public Family(int payShiftEndTime, int payRate) {
-		super();
-		this.payShiftEndTime = payShiftEndTime;
-		this.payRate = payRate;
-	}
+	int payShiftEndTime;
+	int payRate;
+    int payShiftStartTime;
+
+    public int getPayShiftEndTime() {
+        return payShiftEndTime;
+    }
+
+    public int getPayShiftStartTime() {
+        return payShiftStartTime;
+    }
+
+    @JsonCreator
+    public Family (@JsonProperty("payShiftStartTime") int payShiftStartTime, @JsonProperty("payShiftEndTime") int payShiftEndTime, @JsonProperty("payRate") int payrate) {
+        this.payShiftStartTime = payShiftStartTime;
+        this.payShiftEndTime = payShiftEndTime;
+        this.payRate = payrate;
+    }
 
 }
